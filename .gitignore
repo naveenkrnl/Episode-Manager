@@ -1,11 +1,12 @@
+bin/
+include/
+pip-selfcheck.json
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
-.vscode/
 *.py[cod]
 *$py.class
-*.pyc
-*.sqlite3
-*.jpg
 
 # C extensions
 *.so

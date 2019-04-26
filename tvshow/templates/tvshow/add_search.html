@@ -1,14 +1,7 @@
 {% extends 'tvshow/header.html' %}
 
 {% block content %}
-<div class="row text-xs-center">
-  <form class="form-inline" method="post" action="/add_search">{% csrf_token %}
-    <div class="form-group">
-      <input type="text" class="form-control" name="search_string" placeholder="TV Show Name">
-    </div>
-    <button type="submit" class="btn btn-primary">Search</button>
-  </form>
-</div>
+{% include 'tvshow/search_form.html' %}
 <br><br>
 {% if context.Flag %}
 <div class="card-columns">
@@ -30,5 +23,8 @@
   </div>
   {% endfor %}
 </div>
+{% else %}
+<h4>Nothing Found. Retry with correct series Name</h4>
 {% endif %}
+
 {% endblock %}

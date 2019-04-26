@@ -1,7 +1,11 @@
 {% extends "tvshow/header.html" %}
 
 {% block content %}
-<div class="container-fluid col-xs-12">
+{% include 'tvshow/search_form.html'%}
+<div class="container-fluid col-xs-12 mt-3">
+  <div class="header">
+    <h4><strong>Your TV Shows :</strong></h4>
+  </div>
 <div class="card-columns">
   {% for show in show_data %}
   <div class="card">

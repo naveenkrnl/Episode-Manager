@@ -1,0 +1,9 @@
+<div class="row text-xs-center">
+    <p>Search for your favourite TV Shows and Manage them from right here</p><br/>
+    <form class="form-inline" method="post" action="/add_search">{% csrf_token %}
+      <div class="form-group">
+        <input type="text" class="form-control" name="search_string" placeholder="TV Show Name">
+      </div>
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+  </div>
